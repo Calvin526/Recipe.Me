@@ -62,7 +62,7 @@ export const createUser = async (
 
     }
 
-    let addUser = await allUsers.insertOne(addUser);
+    let addUser = await allUsers.insertOne(newUser);
 
     if (!addUser)
         throw "User insertion unsuccessful";
@@ -70,15 +70,18 @@ export const createUser = async (
     return newUser;
 }
 
-export const loginUser = async (
-    emailAddress,
-    password
-) =>
+export const loginUser = async (emailAddress, password) =>
 {
 
 }
 
-export const modifyUser = () =>
+export const editUser = async (userID) =>
 {
     
+}
+
+//Also delete all recipes & reviews left by this user
+export const deleteUser = async (userID) =>
+{
+
 }
